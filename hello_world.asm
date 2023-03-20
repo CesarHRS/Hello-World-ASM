@@ -5,7 +5,6 @@ str:    db  "Hello, World"      ;db is a command from nasm, it allows me to defi
 .len:   equ $ - str             ;equ is another nasm command, this line takes the relative position of len in the memory and than subtracts itself with the position of str, and this will get the length of "Hello World"
         ;this only make sense because the write command takes 3 parameters, the file descriptor, a char pointer to a buffer where the string is located and the length of the string
 
-
     section .text   ;the text section is were the code is
     global _main    ;indicates that the main label is a global label, so it could be called from other labels
 _main:
